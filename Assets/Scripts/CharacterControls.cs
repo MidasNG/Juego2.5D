@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class CharacterControls : MonoBehaviour
 {
-    private float speed = 5, moveInput;
+    private float speed = 5, moveInput, jumpPower = 5;
     private Rigidbody rb;
     private Animator animator;
     void Start()
@@ -40,9 +40,17 @@ public class CharacterControls : MonoBehaviour
         moveInput = value.Get<float>();
     }
 
-    private void OnJump(InputValue value)
+    private void OnJump()
     {
         animator.SetTrigger("jump");
-        rb.velocity = new Vector3(moveInput, rb.velocity.y, 0);
+    }
+    private void Jump()
+    {
+        rb.velocity = new Vector3(rb.velocity.x, jumpPower, 0);
+    }
+
+    private void OnShoot()
+    {
+        animator.SetTrigger("shoot");
     }
 }
