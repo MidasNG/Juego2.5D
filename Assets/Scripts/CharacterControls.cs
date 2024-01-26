@@ -44,7 +44,7 @@ public class CharacterControls : MonoBehaviour
     {
         animator.SetTrigger("jump");
     }
-    private void Jump()
+    public void Jump()
     {
         rb.velocity = new Vector3(rb.velocity.x, jumpPower, 0);
     }

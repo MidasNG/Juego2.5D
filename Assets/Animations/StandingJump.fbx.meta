@@ -60,7 +60,7 @@ ModelImporter:
       - time: 0.23522848
         functionName: Jump
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 0b5c4b0cd8d46ff4284cc1d4820e6178, type: 3}
+        objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
